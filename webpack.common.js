@@ -1,9 +1,9 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: "./src/index.js",
   },
   module: {
     rules: [
@@ -13,37 +13,37 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: {
-          loader: 'file-loader',
+          loader: "file-loader",
           options: {
-            name: 'fonts/[name].[ext]',
-            outputPath: 'fonts/'
-          }
-       } 
+            name: "fonts/[name].[ext]",
+            outputPath: "fonts/",
+          },
+        },
       },
       {
         test: /\.mp4$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].mp4',
-              outputPath: 'videos/'
-            }
-          }
-        ]
+              name: "[name].mp4",
+              outputPath: "videos/",
+            },
+          },
+        ],
       },
       {
         test: /\.(mp3|wav|ogg)$/i, // Match audio file extensions
         use: {
-          loader: 'file-loader',
+          loader: "file-loader",
           options: {
-            name: '[name].[hash].[ext]', // Customize output file naming
-            outputPath: 'assets/audio/', // Output directory for audio files
+            name: "[name].[hash].[ext]", // Customize output file naming
+            outputPath: "assets/audio/", // Output directory for audio files
           },
         },
       },
@@ -51,12 +51,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'App Name',
+      title: "Submed",
+      template: "./src/index.html",
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
   },
 };
