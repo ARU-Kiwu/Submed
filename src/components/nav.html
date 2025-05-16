@@ -1,8 +1,38 @@
-<nav>
-    <ul>
-        <li href="subiecte">Subiecte</li>
-        <li href="flashcards">Flashcards</li>
-        <li href="drespre">Despre</li>
-        <li>Contact</li>
-    </ul>
-</nav>
+<nav class="navbar navbar-expand-lg px-lg-5 px-md-5 px-sm-4 p-section fixed-top container-fluid">
+      <div class="container-fluid fw-medium">
+          <a class="navbar-brand-2" href="index.html">
+              <h1>Submed</h1>
+          </a>
+          <label class="hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <input type="checkbox">
+              <svg viewBox="0 0 32 32">
+                  <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                  <path class="line" d="M7 16 27 16"></path>
+              </svg>
+          </label>
+          <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="index.html">Acasă</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Subiecte
+                      </a>
+                      <ul class="dropdown-menu text-lg-center">
+                          <li><a href="cluj.html" class="dropdown-item">Cluj</a></li>
+                          <li><a href="iasi.html" class="dropdown-item">Iași</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li class="nav-item">
+                      <a class="nav-link" href="desprecontact.html">Despre Proiect și Contact</a>
+                  </li>
+                  <!--<li class="nav-item ms-auto">
+                    <button id="nightModeToggle" class="btn btn-dark">🌙 Night Mode</button>
+                </li>
+              -->
+              </ul>
+          </div>
+      </div>
+  </nav>
